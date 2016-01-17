@@ -5,5 +5,7 @@
 ;;; This fixes it
 ;;; Fix from: http://stackoverflow.com/questions/18856047/emacs-magit-commit-opens-new-emacs-client#comment28590245_19265280
 (set-variable 'magit-emacsclient-executable "/usr/local/Cellar/emacs/24.5/bin/emacsclient")
+;;; Stop nagging about the upstream branch
+(setq magit-push-always-verify nil)
 ;; This seems to be a popular choice, Emacs Prelude uses it
 (global-set-key (kbd "C-x g") 'magit-status)

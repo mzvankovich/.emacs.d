@@ -1,3 +1,6 @@
+;;; Add the bin folder containing the git binary to the exec path
+(add-to-list 'exec-path "/usr/local/bin/")
+
 ;;; Magit now breaks trying to open a new emacs for commit messages
 ;;; This fixes it
 ;;; Fix from: http://stackoverflow.com/questions/18856047/emacs-magit-commit-opens-new-emacs-client#comment28590245_19265280

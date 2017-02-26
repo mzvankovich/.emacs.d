@@ -7,7 +7,7 @@
 
 (let* ((conf-dir (file-name-directory (or load-file-name "~/.emacs.d/")))
       (preload-dir (expand-file-name "preload" conf-dir))
-      (custom-dir (expand-file-name "crumpet" conf-dir)))
+      (custom-dir (expand-file-name "postload" conf-dir)))
   (add-to-list 'load-path preload-dir)
   (add-to-list 'load-path custom-dir)
   (mapc 'load (directory-files preload-dir 't "^[^#].*el$"))

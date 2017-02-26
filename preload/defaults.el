@@ -17,7 +17,7 @@
 (column-number-mode)
 
 ;;; Set 14pt font size
-(set-face-attribute 'default nil :height 140)
+(set-face-attribute 'default nil :height 120)
 
 ;;; Show line numbers on opened files
 (add-hook 'find-file-hook (lambda () (linum-mode 1)))

@@ -32,7 +32,12 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (cider clojure-mode rainbow-delimiters paredit expand-region magit company solarized-theme helm))))
+    (cider clojure-mode rainbow-delimiters paredit expand-region magit company solarized-theme helm)))
+ '(safe-local-variable-values
+   (quote
+    ((cider-inject-dependencies-at-jack-in)
+     (cider-lein-command . "nix-shell")
+     (cider-lein-parameters . "-I nixpkgs=/home/dan/.nixpkgs --pure --run \"lein with-profile +1.8 repl :headless\"")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

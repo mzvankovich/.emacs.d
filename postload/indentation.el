@@ -4,5 +4,5 @@
 ;;; Whitespace
 (require 'whitespace)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-(setq whitespace-style (quote (face tabs tab-mark)))
+(setq whitespace-style (quote (face tabs trailing lines-tail tab-mark)))
 (global-whitespace-mode 1)

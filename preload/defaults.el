@@ -16,8 +16,8 @@
 ;;; Show the column number in the modeline
 (column-number-mode)
 
-;;; Set 14pt font size
-(set-face-attribute 'default nil :height 120)
+;;; Set 10pt font size
+(set-face-attribute 'default nil :height 100)
 
 ;;; Show line numbers on opened files
 (add-hook 'find-file-hook (lambda () (linum-mode 1)))

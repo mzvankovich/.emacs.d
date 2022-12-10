@@ -3,7 +3,6 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
 
 (let* ((conf-dir (file-name-directory (or load-file-name "~/.emacs.d/")))
       (preload-dir (expand-file-name "preload" conf-dir))
@@ -18,6 +17,7 @@
      company
      magit
      expand-region
+     which-key
      ;;; Lisp
      paredit
      rainbow-delimiters
@@ -31,14 +31,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (cider clojure-mode rainbow-delimiters paredit expand-region magit company solarized-theme helm)))
+   '(which-key cider clojure-mode rainbow-delimiters paredit expand-region magit company solarized-theme helm))
  '(safe-local-variable-values
-   (quote
-    ((cider-inject-dependencies-at-jack-in)
+   '((cider-default-clj-repl . clojure-cli)
+     (cider-clojure-cli-global-options . "-A:dev")
+     (cider-inject-dependencies-at-jack-in)
      (cider-lein-command . "nix-shell")
      (cider-lein-parameters . "-I nixpkgs=/home/dan/.nix-defexpr/channels/nixpkgs --pure --run \"lein -o with-profile +1.8 repl :headless\"")
-     (cider-lein-parameters . "-I nixpkgs=/home/dan/.nix-defexpr/channels/nixpkgs --pure --run \"lein with-profile +1.8 repl :headless\"")))))
+     (cider-lein-parameters . "-I nixpkgs=/home/dan/.nix-defexpr/channels/nixpkgs --pure --run \"lein with-profile +1.8 repl :headless\""))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
